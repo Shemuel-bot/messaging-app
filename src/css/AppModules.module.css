@@ -1,0 +1,41 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    height: 97vh;
+    margin-top: 5px;
+    border-radius: 20px;
+}
+
+.archiveImg{
+    margin-bottom: auto;
+    width: 30px;
+    height: 30px;
+
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.archiveImg:hover{
+    background-color: rgba(218, 218, 218, 0.377);
+}
+
+
+
+.img{
+    width: 30px;
+    height: 30px;
+
+
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.img:hover{
+    background-color: rgba(218, 218, 218, 0.377);
+}

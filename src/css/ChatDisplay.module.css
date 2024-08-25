@@ -1,0 +1,15 @@
+.body{
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ffffff;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    height: 97vh;
+    margin-top: 5px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(109, 109, 109, 0.062);
+}
+
