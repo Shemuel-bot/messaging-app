@@ -8,6 +8,7 @@ import PeopleSearch from './modules/PeopleSearch.jsx';
 import RequestSearch from './modules/RequestSearch.jsx';
 import ArchiveSearch from './modules/ArchiveSearch.jsx';
 import LogIn from './modules/LogIn.jsx';
+import SignUp from './modules/SignUp.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,11 @@ const router = createBrowserRouter([
     element: <LogIn />,
   },
   {
-    path:'/home',
+    path:'sign-up',
+    element: <SignUp  />,
+  },
+  {
+    path:'home',
     element: <App />,
     children: [
       {path: 'chat', element: <ChatSearch />},
