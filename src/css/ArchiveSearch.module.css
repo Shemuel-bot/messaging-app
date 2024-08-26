@@ -1,0 +1,16 @@
+.h2{
+    margin-left: 20px;
+}
+
+.noChat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.img{
+    width: 200px;
+    height: 200px;
+    color: rgb(255, 0, 0);
+}

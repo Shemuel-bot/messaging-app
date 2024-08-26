@@ -1,12 +1,10 @@
 import style from '../css/ChatDisplay.module.css';
-import ChatSearch from './ChatSearch.jsx';
-import PeopleSearch from './PeopleSearch.jsx';
-
+import { Outlet } from 'react-router-dom';
 function ChatDisplay() {
     return(
         <>
         <div className={style.body}>
-            <ChatSearch />
+            <Outlet />
         </div>
         </>
     )
