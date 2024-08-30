@@ -4,6 +4,13 @@ import AppModules from './modules/AppModules.jsx';
 import ChatDisplay from './modules/ChatDisplay.jsx';
 import ModuleDisplay from './modules/ModuleDisplay.jsx';
 
+const token = async () => {
+        fetch('http://localhost:3000/api/home', {
+          method: 'get',
+          headers: { authorization: localStorage.getItem("token") },
+        }).
+}
+
 function App() {
   return (
     <>
