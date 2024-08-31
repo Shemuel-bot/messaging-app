@@ -4,10 +4,12 @@
 
 .noChat{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     height: 90%;
+    overflow-y: auto;
 }
+
 
 .img{
     width: 250px;

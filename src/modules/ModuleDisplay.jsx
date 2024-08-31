@@ -5,8 +5,13 @@ function ModuleDisplay() {
     return(
         <>
         <div className={style.body}>
-        <img src={mailbox} className={style.img} alt="" />
-        <h1>No messages here</h1>
+            <h3 id='chater'></h3>
+         <div className={style.display}>
+         </div>
+         <div className={style.textdiv}>
+            <input type="text" className={style.input} placeholder='Type something here.....'/>
+            <button className={style.btn}>Send</button>
+         </div>
         </div>
         </>
     )
