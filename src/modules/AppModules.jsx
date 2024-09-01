@@ -1,8 +1,6 @@
 import style from '../css/AppModules.module.css';
 import chat from '../assets/chat.png';
 import people from '../assets/account-group.png';
-import request from '../assets/chat-processing.png';
-import archive from '../assets/archive.png';
 import profile from '../assets/account-circle-outline.png';
 import { Link } from 'react-router-dom';
 
@@ -20,7 +18,9 @@ function AppModules() {
 
             <Link className={style.archiveLink}>
             </Link>
+            <Link to='/profile'>
             <img src={profile} className={style.img} id='profile' alt="profile" />
+            </Link>
         </div>
         </>
     )
