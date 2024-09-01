@@ -5,7 +5,6 @@
 .noChat{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 90%;
     overflow-y: auto;
 }

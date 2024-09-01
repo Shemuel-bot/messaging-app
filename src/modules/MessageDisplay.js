@@ -1,9 +1,17 @@
 import style from "../css/ModuleDisplay.module.css";
 
 async function Display(id, name) {
+  const oldTexts = document.querySelector('#display').childNodes;
+  oldTexts.forEach(element => {
+    element.remove()
+  });
+  if(oldTexts.length > 0)
+    oldTexts[0].remove();
+ 
   const messages = await fetch("http://localhost:3000/api/get-messages", {
     method: "post",
-    headers: { authorization: `Bearer ${localStorage.getItem("token")}` },
+    headers: { "Content-Type": "application/json",
+                authorization: `Bearer ${localStorage.getItem("token")}` },
     body: JSON.stringify({
       userId: id,
     }),
@@ -23,6 +31,7 @@ async function Display(id, name) {
       document.querySelector(`.${style.display}`).append(text)
     });
   }
+  localStorage.setItem('chaterId', id)
   document.getElementById('chater').textContent = name;
 }
 

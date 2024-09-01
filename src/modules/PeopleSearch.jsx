@@ -18,7 +18,7 @@ function PeopleSearch() {
                 UI.push(
                     <button key={x.id} className={style.btn} onClick={async () => {await Display(x.id, x.firstName)}}>
                         <img src={profile} className={style.img} alt="" />
-                        <h3>{x.firstName}</h3>
+                        <h3 id={x.firstName}>{x.firstName}</h3>
                     </button>
                 )
             });

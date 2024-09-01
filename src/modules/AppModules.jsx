@@ -18,12 +18,7 @@ function AppModules() {
             <img src={people} className={style.img} alt="people" />
             </Link>
 
-            <Link to='request'>
-            <img src={request} className={style.img} alt="request" />
-            </Link>
-
-            <Link to='archive' className={style.archiveLink}>
-            <img src={archive} className={style.archiveImg} alt="archives" />
+            <Link className={style.archiveLink}>
             </Link>
             <img src={profile} className={style.img} id='profile' alt="profile" />
         </div>

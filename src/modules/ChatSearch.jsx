@@ -2,6 +2,7 @@ import style from '../css/ChatSearch.module.css';
 import NoChats from '../assets/No-Chats.png';
 import profile from '../assets/account-circle-outline.png';
 import { useEffect, useState } from 'react';
+import Display from "./MessageDisplay";
 
 function ChatSearch() {
     const [chats, setChats] = useState([]);
@@ -14,9 +15,9 @@ function ChatSearch() {
         }).then(async res => {
             const users = await res.json();
             const UI = []
-            users.users.forEach(x => {
+            users.chats.forEach(x => {
                 UI.push(
-                    <button key={x.id} className={style.btn}>
+                    <button key={x.id} className={style.btn} onClick={async () => {await Display(x.id, x.firstName)}}>
                         <img src={profile} className={style.img} alt="" />
                         <h3>{x.firstName}</h3>
                     </button>
@@ -27,9 +28,8 @@ function ChatSearch() {
     }, []);
     return(
         <>
-        <div>
         <h2 className={style.h2}>Chats</h2>
-        </div>
+        
         <div className={style.noChat}>
             <img src={NoChats} hidden className={style.img} alt="" />
             {chats}
