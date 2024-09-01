@@ -7,7 +7,7 @@ import Display from "./MessageDisplay";
 function ChatSearch() {
     const [chats, setChats] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:3000/api/get-chats', {
+        fetch('https://messenger-me.adaptable.app/api/get-chats', {
             method: 'get',
             headers: {"Content-Type": "application/json",
                         authorization: `Bearer ${localStorage.getItem("token")}`

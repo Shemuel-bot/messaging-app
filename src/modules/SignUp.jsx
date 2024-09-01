@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const signUp = async () => {
     const result = 
-    await fetch('http://localhost:3000/api/sign-up', {
+    await fetch('https://messenger-me.adaptable.app/api/sign-up', {
         method: 'post',
         headers: { "Content-Type": "application/json",
                    'Access-Control-Allow-Methods': 'POST',

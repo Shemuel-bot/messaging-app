@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Update = () => {
-    fetch('http://localhost:3000/api/update', {
+    fetch('https://messenger-me.adaptable.app/api/update', {
         method: 'post',
         headers: {  "Content-Type": "application/json", 
             authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -29,7 +29,7 @@ function Profile() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/home', {
+        fetch('https://messenger-me.adaptable.app/api/home', {
           method: 'get',
           headers: { authorization: `Bearer ${localStorage.getItem("token")}` },
         }).then(async res => {

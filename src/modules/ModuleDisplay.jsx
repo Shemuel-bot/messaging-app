@@ -1,7 +1,7 @@
 import style from '../css/ModuleDisplay.module.css';
 
 const SendMessage = async () => {
-  await  fetch('http://localhost:3000/api/send-message', {
+  await  fetch('https://messenger-me.adaptable.app/api/send-message', {
         method: 'post',
         headers: {  "Content-Type": "application/json", 
                     authorization: `Bearer ${localStorage.getItem("token")}` },

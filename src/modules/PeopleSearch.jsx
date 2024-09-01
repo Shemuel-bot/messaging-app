@@ -6,7 +6,7 @@ import Display from "./MessageDisplay";
 function PeopleSearch() {
     const [people, setPeople] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:3000/api/get-people', {
+        fetch('https://messenger-me.adaptable.app/api/get-people', {
             method: 'get',
             headers: {"Content-Type": "application/json",
                         authorization: `Bearer ${localStorage.getItem("token")}`

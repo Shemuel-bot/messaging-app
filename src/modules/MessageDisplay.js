@@ -8,7 +8,7 @@ async function Display(id, name) {
   if(oldTexts.length > 0)
     oldTexts[0].remove();
  
-  const messages = await fetch("http://localhost:3000/api/get-messages", {
+  const messages = await fetch("https://messenger-me.adaptable.app/api/get-messages", {
     method: "post",
     headers: { "Content-Type": "application/json",
                 authorization: `Bearer ${localStorage.getItem("token")}` },
