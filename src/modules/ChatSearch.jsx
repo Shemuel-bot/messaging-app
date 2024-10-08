@@ -7,7 +7,7 @@ import Display from "./MessageDisplay";
 function ChatSearch() {
   const [chats, setChats] = useState([]);
   useEffect(() => {
-    fetch("https://messenger-me.adaptable.app/api/get-chats", {
+    fetch("https://managing-tessi-third-guy-36437de9.koyeb.app/api/get-chats", {
       method: "get",
       headers: {
         "Content-Type": "application/json",

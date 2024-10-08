@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 
 const logIn = async () => {
-  const value = await fetch("https://messenger-me.adaptable.app/api/log-in", {
+  const value = await fetch("https://managing-tessi-third-guy-36437de9.koyeb.app/api/log-in", {
     method: "post",
     headers: {
       "Content-Type": "application/json",

@@ -3,19 +3,22 @@ import logo from "../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 
 const signUp = async () => {
-  const result = await fetch("https://messenger-me.adaptable.app/api/sign-up", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Methods": "POST",
-    },
-    body: JSON.stringify({
-      firstName: document.getElementById("firstName").value,
-      lastName: document.getElementById("lastName").value,
-      email: document.getElementById("email").value,
-      password: document.getElementById("password").value,
-    }),
-  }).then(async (res) => {
+  const result = await fetch(
+    "https://managing-tessi-third-guy-36437de9.koyeb.app/api/sign-up",
+    {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Methods": "POST",
+      },
+      body: JSON.stringify({
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+      }),
+    }
+  ).then(async (res) => {
     const a = await res.json();
     return a;
   });

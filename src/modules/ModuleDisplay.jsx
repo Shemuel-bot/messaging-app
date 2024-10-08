@@ -1,17 +1,20 @@
 import style from "../css/ModuleDisplay.module.css";
 
 const SendMessage = async () => {
-  await fetch("https://messenger-me.adaptable.app/api/send-message", {
-    method: "post",
-    headers: {
-      "Content-Type": "application/json",
-      authorization: `Bearer ${localStorage.getItem("token")}`,
-    },
-    body: JSON.stringify({
-      userId: Number(localStorage.getItem("chaterId")),
-      message: document.getElementById("message").value,
-    }),
-  }).then(async (res) => {
+  await fetch(
+    "https://managing-tessi-third-guy-36437de9.koyeb.app/api/send-message",
+    {
+      method: "post",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+      body: JSON.stringify({
+        userId: Number(localStorage.getItem("chaterId")),
+        message: document.getElementById("message").value,
+      }),
+    }
+  ).then(async (res) => {
     const a = await res.json();
     if (a.value) {
       const text = document.createElement("p");
