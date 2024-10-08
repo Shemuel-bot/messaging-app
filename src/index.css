@@ -1,8 +1,8 @@
 @font-face {
-    font-family: arimo;
-    src: url('./assets/fonts/static/Arimo-Bold.ttf');
+  font-family: arimo;
+  src: url("./assets/fonts/static/Arimo-Bold.ttf");
 }
 
-:root{
-    font-family: arimo;
+:root {
+  font-family: arimo;
 }
