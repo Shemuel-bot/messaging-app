@@ -42,11 +42,12 @@ These are tools that I used to build the site
   </li>
 </ul>
 
+### backend repository
+https://github.com/Shemuel-bot/messaging-app-backend.git
 
 ## Local setup
 
 ```sh
-cd frontend
 npm run dev
 ```
 
