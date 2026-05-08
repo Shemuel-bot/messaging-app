@@ -3,8 +3,8 @@ import profile from "../assets/account-circle-outline.png";
 import style from "../css/Profile.module.css";
 import { useNavigate } from "react-router-dom";
 
-const Update = () => {
-  fetch("https://managing-tessi-third-guy-36437de9.koyeb.app/api/update", {
+const Update = async () => {
+  await fetch("https://managing-tessi-third-guy-36437de9.koyeb.app/api/update", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
@@ -37,40 +37,50 @@ function Profile() {
       if (a.value !== false) {
         const UI = [];
         UI.push(
-          <input
-            type="text"
-            key={1}
-            className={style.input}
-            id="firstName"
-            defaultValue={a.value.user.firstName}
-          />,
-          <input
-            type="text"
-            key={2}
-            className={style.input}
-            id="lastName"
-            defaultValue={a.value.user.lastName}
-          />,
-          <input
-            type="email"
-            key={3}
-            className={style.input}
-            id="email"
-            defaultValue={a.value.user.email}
-          />,
-          <input
-            type="password"
-            key={4}
-            className={style.input}
-            id="password"
-            placeholder="Password"
-          />,
-          <h3>About</h3>,
-          <textarea
-            name=""
-            defaultValue={a.value.user.about}
-            id="about"
-          ></textarea>
+          <div key="firstNameGroup" className={style.inputGroup}>
+            <label htmlFor="firstName" className={style.label}>First Name</label>
+            <input
+              type="text"
+              className={style.input}
+              id="firstName"
+              defaultValue={a.value.user.firstName}
+            />
+          </div>,
+          <div key="lastNameGroup" className={style.inputGroup}>
+            <label htmlFor="lastName" className={style.label}>Last Name</label>
+            <input
+              type="text"
+              className={style.input}
+              id="lastName"
+              defaultValue={a.value.user.lastName}
+            />
+          </div>,
+          <div key="emailGroup" className={style.inputGroup}>
+            <label htmlFor="email" className={style.label}>Email</label>
+            <input
+              type="email"
+              className={style.input}
+              id="email"
+              defaultValue={a.value.user.email}
+            />
+          </div>,
+          <div key="passwordGroup" className={style.inputGroup}>
+            <label htmlFor="password" className={style.label}>Password</label>
+            <input
+              type="password"
+              className={style.input}
+              id="password"
+              placeholder="Enter new password"
+            />
+          </div>,
+          <div key="aboutGroup" className={style.inputGroup}>
+            <label htmlFor="about" className={style.label}>About</label>
+            <textarea
+              className={style.textarea}
+              defaultValue={a.value.user.about}
+              id="about"
+            ></textarea>
+          </div>
         );
         setUser(UI);
       } else {
@@ -84,23 +94,25 @@ function Profile() {
       <div className={style.body}>
         <div className={style.fields}>
           {user}
-          <button
-            className={style.btn}
-            onClick={() => {
-              Update();
-            }}
-          >
-            Update
-          </button>
-          <button
-            className={style.btn}
-            onClick={() => {
-              localStorage.removeItem("token");
-              navigate("/");
-            }}
-          >
-            Log Out
-          </button>
+          <div className={style.buttonGroup}>
+            <button
+              className={style.btn}
+              onClick={() => {
+                Update();
+              }}
+            >
+              Update
+            </button>
+            <button
+              className={style.btn}
+              onClick={() => {
+                localStorage.removeItem("token");
+                navigate("/");
+              }}
+            >
+              Log Out
+            </button>
+          </div>
         </div>
         <img src={profile} alt="" className={style.img} />
       </div>
