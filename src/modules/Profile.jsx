@@ -82,8 +82,6 @@ function Profile() {
   return (
     <>
       <div className={style.body}>
-        <h1>Profile</h1>
-        <img src={profile} alt="" className={style.img} />
         <div className={style.fields}>
           {user}
           <button
@@ -104,6 +102,7 @@ function Profile() {
             Log Out
           </button>
         </div>
+        <img src={profile} alt="" className={style.img} />
       </div>
     </>
   );

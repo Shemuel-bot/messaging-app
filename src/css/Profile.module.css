@@ -1,14 +1,21 @@
 .body{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: 200px;
 
-    width: 97vw;
+    background-color: rgba(202, 202, 202, 0.603);
+    width: 99.5vw;
     height: 97vh;
 }
 
 .img{
     border-radius: 100%;
+
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-left: 10%;
+    margin-bottom: -15%;
 
     width: 200px;
     height: 200px;
@@ -32,6 +39,11 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
+    background-color: rgb(255, 255, 255);
+
+    height: 100%;
+    width: 100%;
 }
 
 .btn{
