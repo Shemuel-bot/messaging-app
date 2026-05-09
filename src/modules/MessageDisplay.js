@@ -1,11 +1,10 @@
 import style from "../css/ModuleDisplay.module.css";
 
 async function Display(id, name) {
-  const oldTexts = document.querySelector("#display").childNodes;
-  oldTexts.forEach((element) => {
-    element.remove();
-  });
-  if (oldTexts.length > 0) oldTexts[0].remove();
+  const display = document.querySelector("#display");
+  if (display) {
+    display.innerHTML = "";
+  }
 
   const messages = await fetch(
     "https://managing-tessi-third-guy-36437de9.koyeb.app/api/get-messages",
@@ -29,8 +28,11 @@ async function Display(id, name) {
       const text = document.createElement("p");
       text.textContent = element.message;
 
-      if (element.from === messages.id) text.className = style.righttext;
-      else text.className = style.lefttext;
+      const conversationUserId = Number(id);
+      const senderId = Number(element.from);
+
+      if (senderId === conversationUserId) text.className = style.lefttext;
+      else text.className = style.righttext;
 
       document.querySelector(`.${style.display}`).append(text);
     });
